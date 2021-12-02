@@ -10,9 +10,6 @@ public class GeraPedido {
     private BigDecimal valorOrcamento;
     private int quantidadeItens;
 
-    
-
-
     public GeraPedido(String cliente, BigDecimal valorOrcamento, int quantidadeItens) {
         this.cliente = cliente;
         this.valorOrcamento = valorOrcamento;
