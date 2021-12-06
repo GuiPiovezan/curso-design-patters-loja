@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.management.RuntimeErrorException;
+
 import br.com.alura.loja.orcamento.situacao.EmAnalise;
 import br.com.alura.loja.orcamento.situacao.Finalizado;
 import br.com.alura.loja.orcamento.situacao.SituacaoOrcamentaria;
@@ -27,6 +29,11 @@ public class Orcamento implements Orcavel {
     }
 
     public BigDecimal getValor() {
+        try{
+            Thread.sleep(2000);
+        } catch(InterruptedException ex){
+            throw new RuntimeException(ex);
+        }
         return valor;
     }
 

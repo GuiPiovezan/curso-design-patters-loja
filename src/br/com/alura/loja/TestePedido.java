@@ -9,6 +9,7 @@ import java.util.Arrays;
 import br.com.alura.loja.pedido.GeraPedido;
 import br.com.alura.loja.pedido.GeraPedidoHandler;
 import br.com.alura.loja.pedido.acoes.EnviarEmail;
+import br.com.alura.loja.pedido.acoes.LogPedido;
 import br.com.alura.loja.pedido.acoes.SalvarBancoDados;
 
 public class TestePedido {
@@ -21,7 +22,8 @@ public class TestePedido {
         GeraPedidoHandler handler = new GeraPedidoHandler(
             Arrays.asList(
                 new SalvarBancoDados(),
-                new EnviarEmail()
+                new EnviarEmail(),
+                new LogPedido()
             )
         );
         handler.execute(gerador);
